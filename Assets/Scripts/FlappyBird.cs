@@ -48,6 +48,15 @@ public class FlappyBird : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        gm.GameOver();
+        if (collision.collider.isTrigger)
+        {
+            gm.scoreCounter += 1;
+            Debug.Log("Detected Successful Pipe!");
+        }
+        else
+        {
+            gm.GameOver();
+
+        }
     }
 }
