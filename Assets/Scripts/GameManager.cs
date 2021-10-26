@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameActive = false;
+        pipeMotionActive = false;
+        firstJump = false;
+
+        // show canvas for game over
     }
 
     public void GameStart()
@@ -51,4 +55,8 @@ public class GameManager : MonoBehaviour
         return gameActive;
     }
 
+    public bool GetPipeMotion()
+    {
+        return pipeMotionActive;
+    }
 }

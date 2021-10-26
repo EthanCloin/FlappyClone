@@ -26,6 +26,7 @@ public class FlappyBird : MonoBehaviour
                 gm.SetFirstJump(true);
                 rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                 jumpInput = true;
+                gm.SetPipeMotion(true);
             }
             else if (Input.GetKeyDown(KeyCode.Space) && gm.GetFirstJump() == true)
             {
