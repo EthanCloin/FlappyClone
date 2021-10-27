@@ -8,12 +8,14 @@ public class FlappyBird : MonoBehaviour
     [SerializeField] private float jumpStrength = 2.5f;
     [SerializeField] private GameManager gm;
     public bool jumpInput = false;
+    public Vector3 spawnPosition = new Vector3(-0.25f, 0, 0);
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        transform.position = spawnPosition;
     }
 
     // Update is called once per frame
